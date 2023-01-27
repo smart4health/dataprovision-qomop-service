@@ -1,0 +1,18 @@
+{
+  "id": 45606798,
+  "name": "Abdominal rigidity",
+  "domainId": "Condition",
+  "vocabulary": {
+    "id": "ICD10",
+    "name": "International Classification of Diseases, Tenth Revision (WHO)",
+    "reference": "http://www.who.int/classifications/icd/icdonlineversions/en/",
+    "version": "2020 Release",
+    "conceptId": 44819124
+  },
+  "conceptClassId": "ICD10 code",
+  "standardConcept": true,
+  "conceptCode": "R19.3",
+  "validStart": "1990-05-01",
+  "validEnd": "2099-12-31",
+  "invalidReason": null
+}

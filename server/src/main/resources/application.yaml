@@ -1,0 +1,130 @@
+server:
+  shutdown: graceful
+
+management:
+  endpoints:
+    enabled-by-default: no
+    web.exposure.include: health,metrics,prometheus
+  endpoint.health.enabled: yes
+  endpoint.prometheus.enabled: yes
+  endpoint.metrics.enabled: yes
+  metrics:
+    enable:
+      # Excluded are spring.data.repository.invocations by QomopApplication auto config exclusion
+      all: yes
+
+spring:
+  cloud.vault.enabled: false
+
+  # jpa config for both data sources: For unilateral changes remove here and move to both EntityManagerFactory bean config
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: false
+    hibernate.ddl-auto: validate
+    open-in-view: false
+
+  datasource-primary:
+    url: # see secrets-aws / secrets-vault
+  datasource-omop:
+    url: # see secrets-aws / secrets-vault
+
+  liquibase:
+    change-log: classpath:db/changelog.yaml
+    enabled: true
+
+  profiles:
+    group:
+      local:
+        - debug
+      secrets-vault:
+        - rds-url-from-properties
+      dev:
+        - secrets-aws
+        - cloudwatch-metrics
+        - json-log
+        - debug
+      prod:
+        - secrets-vault
+        - json-log
+      acceptance:
+        # To run locally, comment the following two profiles so local omop is used
+        - secrets-aws
+        - rds-url-from-properties
+
+springdoc:
+  swagger-ui:
+    enabled: true
+    path: docs-ui.html
+  api-docs:
+    path: /docs
+
+documentation-info:
+  title: Qomop Service
+  description: Service that handles queries on top of the OMOP Common Data Model by OHDSI
+  contact:
+    name: Healthmetrix GmbH
+    email: admin@healthmetrix.com
+
+secrets:
+  rds-primary-credentials: qomop/dev/rds-connection-url
+  rds-omop-credentials: qomop/dev/app-omop-connection-url
+
+mock-secrets:
+  rds-connection-url: postgresql://localhost:5434/development?user=username&password=password
+  app-omop-connection-url: postgresql://localhost:5433/omop?user=username&password=password
+
+---
+spring.config.activate.on-profile: json-log
+spring.main.banner-mode: off
+
+---
+spring.config.activate.on-profile: cloudwatch-metrics
+
+management.metrics.enable.jvm: yes
+cloudwatch-metrics:
+  namespace: "" # override per stage
+  step: PT60S
+
+---
+# dev stage
+spring.config.activate.on-profile: dev
+
+cloudwatch-metrics.namespace: "qomop/dev"
+
+---
+# prod stage
+spring.config.activate.on-profile: prod
+
+management.server.port: 8081
+
+---
+# local settings
+spring.config.activate.on-profile: local
+
+server.port: 6060
+
+---
+spring.config.activate.on-profile: secrets-vault
+
+spring.application.name: qomop
+spring.cloud:
+  vault:
+    enabled: true
+    host: localhost
+    port: 8200
+    scheme: http
+    authentication: APPROLE
+    token: # injected on deployment
+    app-role:
+      role: qomop
+spring:
+  config:
+    import:
+      - vault://secret/qomop/rds-primary?prefix=rds-primary.
+      - vault://secret/qomop/rds-omop?prefix=rds-omop.
+  datasource-primary:
+    url: ${rds-primary.url}
+  datasource-omop:
+    url: ${rds-omop.url}
+
+---

@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Healthmetrix GmbH
+      comment: Sets up the coding_failed table
+      changes:
+        - sqlFile:
+            path: db/sql/01-create-coding-failed-table.sql

@@ -1,0 +1,138 @@
+{
+  "coding": [
+    {
+      "system": "http://snomed.info/sct",
+      "code": "21897009",
+      "display": "Generalized anxiety disorder"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "782501005",
+      "display": "Adjustment disorder with mixed anxiety and depressed mood"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "18818009",
+      "display": "Moderate recurrent major depression"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "47372000",
+      "display": "Adjustment disorder with anxious mood"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "17226007",
+      "display": "Adjustment disorder"
+
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "197480006",
+      "display": "Anxiety disorder"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "57194009",
+      "display": "Adjustment disorder with depressed mood"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "105661000119103",
+      "display": "Problem with aged spouse or partner"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "47505003",
+      "display": "Posttraumatic stress disorder"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "313182004",
+      "display": "Chronic post-traumatic stress disorder"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "40379007",
+      "display": "Mild recurrent major depression"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "15639000",
+      "display": "Moderate major depression, single episode"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "78667006",
+      "display": "Dysthymia"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "31177006",
+      "display": "Attention deficit hyperactivity disorder, combined type"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "33449004",
+      "display": "Personality disorder"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "247846004",
+      "display": "Fear of natural phenomena"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "231442003",
+      "display": "Organic catatonic disorder"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "66381006",
+      "display": "Adjustment disorder with mixed disturbance of emotions AND conduct"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "79298009",
+      "display": "Mild major depression, single episode"
+    },
+    {
+      "system": "http://snomed.info/sct",
+      "code": "36474008",
+      "display": "Severe recurrent major depression without psychotic features"
+    },
+    {
+      "system": "some unknown system",
+      "code": "some code",
+      "display": "some display"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "8716-3",
+      "display": "Vital signs"
+    },
+    {
+      "system": "http://loinc.org",
+      "code": "8716-3",
+      "display": "Vital signs"
+    },
+    {
+      "system": "http://hl7.org/fhir/sid/icd-10-cm",
+      "code": "knownSystemButInvalidCode",
+      "display": "Vital signs"
+    },
+    {
+      "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "code": "27334",
+      "display": "hypromellose"
+    },
+    {
+      "system": "invalidItemWithoutSystem"
+    },
+    {
+      "system": "http://purl.bioontology.org/ontology/HCPCS",
+      "code": "M3",
+      "display": "Emergency room visit"
+    }
+  ]
+}

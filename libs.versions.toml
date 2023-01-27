@@ -1,0 +1,99 @@
+[versions]
+kotlin = "1.8.0"
+spring-boot = "3.0.2"
+spring-framework = "6.0.4"
+spring-cloud = "4.0.0"
+junit = "5.9.2"
+jackson = "2.14.1"
+slf4j = "2.0.6"
+springdoc = "2.0.2"
+aws = "2.19.23"
+micrometer = "1.10.3"
+
+[plugins]
+gradle-versions = { id = "com.github.ben-manes.versions", version = "0.44.0"}
+spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot" }
+kotlin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }
+kotlin-jpa = { id = "org.jetbrains.kotlin.plugin.jpa", version.ref = "kotlin" }
+kotlin-noarg = { id = "org.jetbrains.kotlin.plugin.noarg", version.ref = "kotlin" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+
+[libraries]
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
+kotlin-gradle-plugin = { module = "org.jetbrains.kotlin.jvm:org.jetbrains.kotlin.jvm.gradle.plugin", version.ref = "kotlin" }
+
+spring-framework-web = { module = "org.springframework:spring-web", version.ref = "spring-framework" }
+spring-framework-context = { module = "org.springframework:spring-context", version.ref = "spring-framework" }
+spring-framework-tx = { module = "org.springframework:spring-tx", version.ref = "spring-framework" }
+
+spring-boot-boot = { module = "org.springframework.boot:spring-boot", version.ref = "spring-boot" }
+spring-boot-starter-web = { module = "org.springframework.boot:spring-boot-starter-web", version.ref = "spring-boot" }
+spring-boot-starter-actuator = { module = "org.springframework.boot:spring-boot-starter-actuator", version.ref = "spring-boot" }
+spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test", version.ref = "spring-boot" }
+spring-boot-starter-validation = { module = "org.springframework.boot:spring-boot-starter-validation", version.ref = "spring-boot" }
+spring-boot-starter-data-jpa = { module = "org.springframework.boot:spring-boot-starter-data-jpa", version.ref = "spring-boot" }
+
+spring-cloud-vault-config = { module = "org.springframework.cloud:spring-cloud-starter-vault-config", version.ref = "spring-cloud" }
+
+spring-ext-mockk = "com.ninja-squad:springmockk:4.0.0"
+
+springdoc-openapi = { module = "org.springdoc:springdoc-openapi-starter-common", version.ref = "springdoc" }
+springdoc-ui = { module = "org.springdoc:springdoc-openapi-starter-webmvc-ui", version.ref = "springdoc" }
+
+junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit" }
+junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit" }
+junit-jupiter-params = { module = "org.junit.jupiter:junit-jupiter-params", version.ref = "junit" }
+
+liquibase-core = "org.liquibase:liquibase-core:4.19.0"
+liquibase-jakarta = "jakarta.xml.bind:jakarta.xml.bind-api:4.0.0"
+
+slf4j-simple = { module = "org.slf4j:slf4j-simple", version.ref = "slf4j" }
+slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
+
+logback-core = "ch.qos.logback:logback-core:1.4.5"
+logback-encoder = "net.logstash.logback:logstash-logback-encoder:7.2"
+
+jackson-jsr310 = { module = "com.fasterxml.jackson.datatype:jackson-datatype-jsr310", version.ref = "jackson" }
+jackson-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin", version.ref = "jackson" }
+
+micrometer-cloudwatch2 = { module = "io.micrometer:micrometer-registry-cloudwatch2", version.ref = "micrometer" }
+micrometer-prometheus = { module = "io.micrometer:micrometer-registry-prometheus", version.ref = "micrometer" }
+
+assertj = "org.assertj:assertj-core:3.24.2"
+mockk = "io.mockk:mockk:1.13.3"
+
+postgres = "org.postgresql:postgresql:42.5.1"
+aws-secretsmanager = { module = "software.amazon.awssdk:secretsmanager", version.ref = "aws" }
+
+opencsv = "com.opencsv:opencsv:5.7.1"
+
+result = "com.michael-bull.kotlin-result:kotlin-result:1.1.16"
+
+json = "org.json:json:20220924"
+
+[bundles]
+liquibase = ["liquibase-core", "liquibase-jakarta"]
+
+# for all of these, use the appropriate exclusions from build-logic
+test-implementation = [
+    "junit-jupiter-api",
+    "assertj",
+    "mockk"
+]
+
+test-runtime = [
+    "junit-jupiter-engine",
+    "slf4j-simple",
+    "logback-core"
+]
+
+test-spring-implementation = [
+    "junit-jupiter-api",
+    "assertj",
+    "spring-ext-mockk",
+    "spring-boot-starter-test"
+]
+
+test-spring-runtime = [
+    "junit-jupiter-engine"
+]

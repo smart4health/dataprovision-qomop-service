@@ -1,0 +1,18 @@
+{
+  "id": 36720343,
+  "name": "ABL1 Transcript Variant: Substitution in position 707 of A replaced by T",
+  "domainId": "Measurement",
+  "vocabulary": {
+    "id": "OMOP Extension",
+    "name": "OMOP Extension (OHDSI)",
+    "reference": "OMOP generated",
+    "version": "OMOP Extension 20210120",
+    "conceptId": 32758
+  },
+  "conceptClassId": "Transcript Variant",
+  "standardConcept": false,
+  "conceptCode": "NM_005157:c.707A>T",
+  "validStart": "2020-09-13",
+  "validEnd": "2099-12-31",
+  "invalidReason": null
+}

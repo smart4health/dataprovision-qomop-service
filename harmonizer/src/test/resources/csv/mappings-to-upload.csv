@@ -1,0 +1,7 @@
+sourceCode,sourceName,sourceFrequency,sourceAutoAssignedConceptIds,ADD_INFO:source_system,matchScore,mappingStatus,equivalence,statusSetBy,statusSetOn,conceptId,conceptName,mappingType,comment,createdBy,createdOn,assignedReviewer
+636525,"Midazolam tablet 7,5mg",1,,mumc://our-system,0.46,APPROVED,EQUAL,test,1617091279124,40064211,midazolam Oral Tablet,MAPS_TO,,<auto>,1617090287616,
+693332,Metformine tablet 500mg,2,,mumc://our-system,0.68,APPROVED,EQUAL,test,1617091292734,41093223,Metformin 500 MG Oral Tablet [Metform],MAPS_TO,,<auto>,1617090291784,
+1087452,Paracetamol tablet 500mg,5,,mumc://our-system,0.58,APPROVED,EQUAL,test,1617091295907,41091617,Acetaminophen 500 MG Oral Tablet [Paracetamol Al],MAPS_TO,,<auto>,1617090292041,
+1051385,AcetylSALICYLZUUR dispertablet 80mg,4,,mumc://our-system,0.40,APPROVED,EQUAL,test,1617091297107,1718517,acetylsalicylsalicylic acid,MAPS_TO,,<auto>,1617090292210,
+1017217,Temazepam capsule 10mg,1,,mumc://our-system,0.83,UNCHECKED,UNREVIEWED,,0,40085319,temazepam Oral Capsule,MAPS_TO,,<auto>,1617090320195,
+673390,Hydrokinine dragee 100mg,5,,mumc://our-system,0.46,UNCHECKED,UNREVIEWED,,0,41044325,Urokinase 100 UNT,MAPS_TO,,<auto>,1617090323246,

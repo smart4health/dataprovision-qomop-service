@@ -1,0 +1,4 @@
+"source_code","source_name","source_frequency","source_system","target_concept_id"
+"back-pain-treatment","Back pain treatment","4","http://fhir.smart4health.eu/CodeSystem/s4h-encounter-type",
+"laboratory","Laboratory","0","http://terminology.hl7.org/CodeSystem/observation-category",
+"vital-signs","Vital Signs","0","http://terminology.hl7.org/CodeSystem/observation-category",

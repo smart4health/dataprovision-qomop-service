@@ -1,0 +1,16 @@
+@Suppress("DSL_SCOPE_VIOLATION")
+plugins {
+    id("com.healthmetrix.kotlin.conventions")
+    alias(libs.plugins.kotlin.spring)
+    alias(libs.plugins.kotlin.jpa)
+}
+
+dependencies {
+    implementation(projects.commons)
+    implementation(projects.omopCdm.omopApi)
+
+    implementation(libs.spring.framework.web)
+    implementation(libs.spring.boot.starter.data.jpa)
+    implementation(libs.spring.boot.starter.validation)
+    runtimeOnly(libs.postgres)
+}

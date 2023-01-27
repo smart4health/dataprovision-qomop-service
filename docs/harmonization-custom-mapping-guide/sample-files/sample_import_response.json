@@ -1,0 +1,29 @@
+{
+  "importResult": {
+    "imported": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "laboratory",
+        "display": "Laboratory",
+        "targetConceptId": 4135110,
+        "mappingStatus": "APPROVED"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+        "code": "vital-signs",
+        "display": "Vital Signs",
+        "targetConceptId": 3028553,
+        "mappingStatus": "APPROVED"
+      },
+      {
+        "system": "http://fhir.smart4health.eu/CodeSystem/s4h-encounter-type",
+        "code": "back-pain-treatment",
+        "display": "Back pain treatment",
+        "targetConceptId": 134736,
+        "mappingStatus": "APPROVED"
+      }
+    ],
+    "skipped": [],
+    "totalSize": 3
+  }
+}

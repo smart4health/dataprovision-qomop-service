@@ -1,0 +1,18 @@
+{
+  "id": 45881076,
+  "name": "Cardiovascular",
+  "domainId": "Meas Value",
+  "vocabulary": {
+    "id": "LOINC",
+    "name": "Logical Observation Identifiers Names and Codes (Regenstrief Institute)",
+    "reference": "http://loinc.org/downloads/loinc",
+    "version": "2.68",
+    "conceptId": 44819102
+  },
+  "conceptClassId": "Answer",
+  "standardConcept": false,
+  "conceptCode": "LA18277-6",
+  "validStart": "1970-01-01",
+  "validEnd": "2099-12-31",
+  "invalidReason": null
+}

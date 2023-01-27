@@ -1,0 +1,4 @@
+sourceCode,sourceName,sourceFrequency,sourceAutoAssignedConceptIds,ADD_INFO:source_system,matchScore,mappingStatus,equivalence,statusSetBy,statusSetOn,conceptId,conceptName,domainId,mappingType,comment,createdBy,createdOn,assignedReviewer
+laboratory,Laboratory,0,,http://terminology.hl7.org/CodeSystem/observation-category,1.00,APPROVED,EQUAL,Researcher,1621248267668,4135110,Laboratory,Observation,MAPS_TO,,<auto>,1621248139042,
+vital-signs,Vital Signs,0,,http://terminology.hl7.org/CodeSystem/observation-category,1.00,APPROVED,EQUAL,Researcher,1621248269599,3028553,Vital signs,Observation,MAPS_TO,,<auto>,1621248139126,
+back-pain-treatment,Back pain treatment,4,,http://fhir.smart4health.eu/CodeSystem/s4h-encounter-type,0.72,APPROVED,EQUAL,Researcher,1621248280696,134736,Backache,Condition,MAPS_TO,,<auto>,1621248139726,
