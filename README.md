@@ -1,5 +1,13 @@
 # Smart4Health Data-provision QOMOP Service
 
+## Acknowledgements
+
+<img src="./img/eu.jpg" align="left" alt="European Flag" width="60">
+
+This project has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 826117.
+
+## About
+
 Note: QOMOP stands for  "Query service for OMOP" (QOMOP)
 
 This service has its place within the data-provision pipeline for Smart4Health. It has two modules Harmonizer and
